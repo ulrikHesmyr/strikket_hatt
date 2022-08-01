@@ -1,13 +1,12 @@
-import {useState} from 'react'
+import Ordre from './Ordre'
 
-const Bestilling = () => {
-    
-const [headSize, setHeadSize] = useState([])
-const [colors, setColors] = useState([])
-const [pattern, setPattern] = useState([])
-
+const Bestilling = ({leggTilIHandlekurv}) => {
+  
   return (
-    <div>Bestilling</div>
+    <div className='bestilling'>
+    
+    <Ordre leggTilIHandlekurv={leggTilIHandlekurv} />
+    </div>
   )
 }
 
