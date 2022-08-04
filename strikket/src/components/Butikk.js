@@ -4,9 +4,11 @@ import Startside from './Startside'
 import { FaShoppingBag,FaHome, FaAddressBook } from 'react-icons/fa'
 import Handlekurv from './Handlekurv'
 
-const Nav = ({handlekurv, onAdd, sendOrdre}) => {
+const Nav = ({handlekurv, onAdd, gaaTilKassen}) => {
     const [navButtons, setNavButtons] = useState([true, false, false])
-    
+    const gaaTilHandlekurv = () =>{
+      setNavButtons([false,false,true]);
+    }
   return (
     <div>
         <div className="header">
@@ -16,8 +18,8 @@ const Nav = ({handlekurv, onAdd, sendOrdre}) => {
         </div>
         <div className="main">
             {navButtons[0] ? <Startside/>:''}
-            {navButtons[1] ? <Bestilling leggTilIHandlekurv={onAdd}/>:''}
-            {navButtons[2] ? <Handlekurv items={handlekurv} sendOrdre={sendOrdre}/>:''}
+            {navButtons[1] ? <Bestilling leggTilIHandlekurv={onAdd} gaaTilHandlekurv={gaaTilHandlekurv}/>:''}
+            {navButtons[2] ? <Handlekurv items={handlekurv} gaaTilKassen={gaaTilKassen}/>:''}
         </div>
     </div>
     

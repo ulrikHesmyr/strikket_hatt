@@ -21,6 +21,18 @@ body, input {
   border-radius: 5px;
 }
 
+.handlekurv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.handlekurv div{
+  border:thin solid black;
+  padding:0.3rem;
+  margin:0.3rem;
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -76,9 +88,14 @@ body, input {
   transform: scale(0.98);
 }
 .btn:hover{
-  box-shadow: 0 3px 0 rgb(161, 56, 56);
+  transform: scale(1.02);
+  
 }
-
+.option{
+  height:1rem;
+  width:1rem;
+  background-color: blue;
+}
 .btn-block {
   display: block;
   width: 100%;

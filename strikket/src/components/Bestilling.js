@@ -1,11 +1,11 @@
 import Ordre from './Ordre'
 
-const Bestilling = ({leggTilIHandlekurv}) => {
+const Bestilling = ({leggTilIHandlekurv, gaaTilHandlekurv}) => {
   
   return (
     <div className='bestilling'>
     
-    <Ordre leggTilIHandlekurv={leggTilIHandlekurv} />
+    <Ordre leggTilIHandlekurv={leggTilIHandlekurv} gaaTilHandlekurv={gaaTilHandlekurv} />
     </div>
   )
 }
